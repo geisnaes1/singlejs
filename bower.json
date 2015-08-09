@@ -1,0 +1,23 @@
+{
+  "name": "singlejs",
+  "version": "0.2.0",
+  "homepage": "https://github.com/rafaelfragosom/singlejs",
+  "authors": [
+    "Rafael Fragoso <rafaelfragosom@gmail.com>"
+  ],
+  "description": "SingleJS was made to help creating \"slideable\" single-page websites, with mobile integration.",
+  "keywords": [
+    "singlejs",
+    "single",
+    "page",
+    "websites"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
