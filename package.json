@@ -1,0 +1,25 @@
+{
+  "name": "singlejs",
+  "version": "0.2.0",
+  "description": "SingleJS was made to help creating \"slideable\" single-page websites, with mobile integration.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaelfragosom/singlejs.git"
+  },
+  "keywords": [
+    "singlejs",
+    "single",
+    "page",
+    "websites"
+  ],
+  "author": "Rafael Fragoso <rafaelfragosom@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafaelfragosom/singlejs/issues"
+  },
+  "homepage": "https://github.com/rafaelfragosom/singlejs"
+}
