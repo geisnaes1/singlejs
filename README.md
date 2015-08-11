@@ -1,27 +1,33 @@
-# Single.js
+# SingleJS
 
-SingleJS is a jQuery plugin that makes it easy to create websites with single-page scroll.
+SingleJS was made to help creating "slideable" single-page websites, with mobile integration.
 
-## How to use
+## How to install
 
-First you will need the jQuery and [jQuery Easing Plugin](http://gsgd.co.uk/sandbox/jquery/easing/), then you can download the single.js plugin. Once you have done this you will need to create the HTML structure and call the plugin, as in the example below:
+`bower install singlejs --save`
+
+or
+
+`npm install singlejs --save`
+
+## How to use it
 
 ```html
-<div id="single">
+<div class="single">
 
-	<div data-target="home">
+	<div id="home">
 
 	</div>
 
-	<div data-target="skills">
-		<a href="#" data-link="contact">Go To Contact</a>
+	<div id="skills">
+		<a href="#contact">Go To Contact</a>
 	</div>
 
-	<div data-target="portfolio">
-		<img src="img/assassin.jpg" alt="Assassins Creed" data-img="true" width="100%" />
+	<div id="portfolio">
+		<img src="img/assassin.jpg" alt="Assassins Creed" class="single-responsive" />
 	</div>
 
-	<div data-target="contact">
+	<div id="contact">
 
 	</div>
 
@@ -30,66 +36,50 @@ First you will need the jQuery and [jQuery Easing Plugin](http://gsgd.co.uk/sand
 
 And you can call the plugin like that:
 
-```js
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("#single").single();
-	});
-</script>
+```javascript
+$(".single").single();
 ```
 
-The plugin will automatically calculate the window size and create the sections of your website. Notice the ```data-target``` attribute on each child div, the plugin knows that it's a section.
+## Scroll effect on links
 
-## Creating Links
-
-Using the ```data-link``` attribute on every link, button and etc... you can easily get a scroll effect to the targeted section of your website, see the example bellow:
-
-```<a href="#" data-link="contact">Go To Contact</a>```
-
-The link is pointing to the contact section:
+Using the `href` attribute specifying the ID of the element you want to go `CSS Style`, you can easily get a scroll effect to the targeted section of your website, see the example bellow:
 
 ```html
-...
-<div data-target="contact">
+<a href="#contact">Go To Contact</a>
+```
 
-</div>
-...
+The link is pointing at the contact section:
+
+```html
+<div id="contact"></div>
 ```
 
 ## Auto-resizing images
 
-Using the ```data-img="true"``` attribute on every image the plugin will automatically add a sufix to the name of the image as the window changes his size. You just need to have 4 differents sizes of your image available. See the example:
+Using the `single-responsive` class on every image the plugin will automatically add a sufix to the name of the image as the window changes it's size. You only need to have 4 different sizes of the same image available.
 
-Let's say that you have this four images: "assassin.jpg", "assassin-medium.jpg", "assassin-small.jpg" and "assassin-smallest.jpg". They're all optimized for smartphones, tablets and desktops. You can do that:
+Let's say you have these four images: `assassin.jpg`, `assassin-md.jpg`, `assassin-sm.jpg` and `assassin-xs.jpg`. They're all optimized for smartphones, tablets and desktops. You could do this:
 
 ```html
-<img src="img/assassin.jpg" alt="Assassins Creed" data-img="true" />
+<img src="img/assassin.jpg" class="single-responsive" />
 ```
 
-And the plugin will recognize your image source and add the sufix for you.
+And the plugin will recognize your image source and add the suffix for you.
 
 ## Plugin Defaults
 
-```js
+```javascript
 $("#single").single({
 	speed: 2000,
 	animation: "easeOutExpo",
 	sufixes: {
-		smallest: "-smallest",
-		small   : "-small",
-		medium  : "-medium",
-		normal  : ""
+		smallest: "-xs",
+		small   : "-sm",
+		medium  : "-md"
 	}
 });
 ```
 
-## Cool examples
+## Inspiration
 
-SingleJS Working:
-
-- [SingleJS Demo Page](http://singlejs.rafaelfragoso.com/)
-
-Here's a few examples of cool websites that you can easily build with that plugin:
-
-- My Portfolio: [http://www.rafaelfragoso.com/](http://www.rafaelfragoso.com/)
 - SuperheroJS: [http://superherojs.com/](http://superherojs.com/)
