@@ -1,7 +1,7 @@
 {
     "name": "single",
     "title": "SingleJS",
-    "description": "jQuery plugin to create single-page websites with an auto-resizer for images and section.",
+    "description": "SingleJS was made to help creating 'slideable' single-page websites, with mobile integration.",
     "keywords": [
         "auto-resizer",
         "animation",
@@ -9,7 +9,7 @@
         "link",
         "images"
     ],
-    "version": "0.1.1",
+    "version": "0.2.0",
     "author": {
         "name": "Rafael Fragoso",
         "url": "http://www.rafaelfragoso.com"
