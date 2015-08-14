@@ -7,45 +7,45 @@
 </head>
 <body>
 
-	<div id="single">
+	<div class="single">
 
-		<div data-target="home" id="home">
+		<div id="home">
 			<div class="content-resizer">
 				<h1 id="logo">Single.JS</h1>
 				<h2 class="message">Are you ready to take the tour?</h2>
 				<p>
-					<a href="#" data-link="about" class="btn-normal">Yes, let's go!</a>
+					<a href="#about" class="btn-normal">Yes, let's go!</a>
 				</p>
 			</div>
 		</div>
 
-		<div data-target="about" id="about">
+		<div id="about">
 			<div class="content-resizer">
 				<h2 class="message">Single.JS was created to make it easy to create single-page websites to portfolios, presentations and more. Along with the Jquery Ease Plugin it offers beautiful animations to transition sections.</h2>
-				<a href="#" data-link="home" class="btn-normal">Back</a>
-				<a href="#" data-link="examples" class="btn-normal">Next</a>
+				<a href="#home" class="btn-normal">Back</a>
+				<a href="#examples" class="btn-normal">Next</a>
 			</div>
 		</div>
 
-		<div data-target="examples" id="examples">
+		<div id="examples">
 			<div class="content-resizer">
 				<h2 class="message">Single.JS resizes automatically the images for you, try to resize your browser's window and see the effect.</h2>
 				<p>
-					<img src="img/assassin.jpg" id="img-example" class="img-rounded" data-img="true" width="440" alt="Assassin's Creed 3" />
+					<img src="img/assassin.jpg" class="single-responsive" alt="Assassin's Creed 3" />
 				</p>
 				<p>
 					<span class="alt-img"></span>
 				</p>
-				<a href="#" data-link="about" class="btn-normal">Back</a>
-				<a href="#" data-link="contact" class="btn-normal">Next</a>
+				<a href="#about" class="btn-normal">Back</a>
+				<a href="#contact" class="btn-normal">Next</a>
 			</div>
 		</div>
 
-		<div data-target="contact" id="contact">
+		<div id="contact">
 			<div class="content-resizer">
 				<h2 class="message">Download, help or follow the project on Github.</h2>
-				<a href="#" data-link="examples" class="btn-normal">Back</a>
-				<a href="#" data-link="home" class="btn-normal">Back to top</a>
+				<a href="#examples" class="btn-normal">Back</a>
+				<a href="#home" class="btn-normal">Back to top</a>
 			</div>
 		</div>
 
@@ -57,29 +57,11 @@
 	<script src="js/single-0.1.0.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$("#single").single({
+			
+			$(".single").single({
 				speed: 1000
 			});
-
-			// Just a javascript alignment to the content
-			function alignContent() {
-				var windowHeight 	= $(window).height();
-				
-				$('.content-resizer').each(function(){
-					contentHeight 	= $(this).height();
-					$(this).css('top', (windowHeight/2) - (contentHeight/2));
-				});
-
-				$('.alt-img').html($("#img-example").attr('src'));
-			}
-
-			// Execute the function
-			alignContent();
-
-			// Bind the function to the window.onresize
-			$(window).bind("resize", function(){  
-				alignContent();  
-			});
+			
 		});
 	</script>
 
